@@ -23,10 +23,11 @@ public class Main {
     }
 
 
-    public static void printWordsWithDoubleConsunant() {
+    public static void printWordsWithDoubleConsunant()throws FileNotFoundException {
 //how dió yo make it print alle words with double consunat?
-        Scanner scanner = new Scanner(System.in);
-        String text = scanner.nextLine();
+        File file = new File("src/data.txt");
+        scan = new Scanner(file);
+        String text = scan.nextLine();
         int i = 0;
         boolean found = false;
         for (i = 0; i < text.length() - 1; i++) {
@@ -35,6 +36,6 @@ public class Main {
                 break;
             }
         }
-
+        System.out.println(text);
     }
 }
